@@ -15,6 +15,12 @@
     </properties>
     
     <dependencies>
+        <dependency>
+            <groupId>javax.enterprise</groupId>
+            <artifactId>cdi-api</artifactId>
+            <version>1.2</version>
+        </dependency>
+
         <!--Prime Faces-->
         <dependency>
             <groupId>org.primefaces</groupId>
@@ -28,12 +34,7 @@
             <scope>compile</scope>
         </dependency>
         <!--drive-->
-        <dependency>
-            <groupId>com.microsoft.sqlserver</groupId>
-            <artifactId>sqljdbc4</artifactId>
-            <version>4.0</version>
-        </dependency>
-         <!--Hibernate-->
+        <!--Hibernate-->
         <dependency>
             <groupId>org.hibernate</groupId>
             <artifactId>hibernate-entitymanager</artifactId>
@@ -44,16 +45,26 @@
             <artifactId>hibernate-core</artifactId>
             <version>4.3.8.Final</version>
         </dependency>
-        
+        <dependency>
+            <groupId>org.hibernate.javax.persistence</groupId>
+            <artifactId>hibernate-jpa-2.1-api</artifactId>
+            <version>1.0.0.Final</version>
+        </dependency>
         <dependency>
             <groupId>unknown.binary</groupId>
             <artifactId>hibernate-jpa-2.1-api-1.0.0.Final</artifactId>
             <version>SNAPSHOT</version>
         </dependency>
         <dependency>
-            <groupId>com.hynnet</groupId>
-            <artifactId>sqljdbc4-chs</artifactId>
-            <version>4.0.2206.100</version>
+            <groupId>unknown.binary</groupId>
+            <artifactId>hibernate-jpamodelgen-4.3.1.Final</artifactId>
+            <version>SNAPSHOT</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.derby</groupId>
+            <artifactId>derbyclient</artifactId>
+            <version>10.12.1.1</version>
         </dependency>
         <dependency>
             <groupId>javax</groupId>

@@ -1,38 +1,16 @@
-<ui:composition xmlns="http://www.w3.org/1999/xhtml"
-                xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
-                xmlns:h="http://xmlns.jcp.org/jsf/html">
-
-    <nav class="navbar navbar-default">
-        <div class="container-fluid">
-            <div class="navbar-header">
-                <a class="navbar-brand" href="#">RKF-SYSTEM</a>
-            </div>
-            <ul class="nav navbar-nav">
-                <li class="active"><a href="#">Home</a></li>
-                <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Acessórios<span class="caret"></span></a>
-                    <ul class="dropdown-menu">
-                        <li><a href="cadastroacessorio.xhtml">Consoles</a></li>
-                        <li><a href="../paginas/index.xhtml">Jogos</a></li>
-                        <li><a href="#">controles</a></li>
-                    </ul>
-                </li>
-                <li><a href="#">Fale Conosco</a></li>
-                <li><a href="#">Sobre nós</a></li>
-            </ul>
-        </div>
-    </nav>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-</ui:composition>
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui">
+    <h:form>
+        <h:panelGrid columns="1" style="margin-top:100px;">
+                <h:commandLink value="Home" action="#"></h:commandLink>
+                <h:commandLink value="Cadastro de Funcionários" action="#"></h:commandLink>
+                <h:commandLink value="Estoque" action="#"></h:commandLink>
+                <h:commandLink value="Relátorios" action="#"></h:commandLink>
+            </h:panelGrid>
+    </h:form>
+</html>

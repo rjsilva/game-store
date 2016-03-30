@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui">
+    <ui:composition template="../template/layout.xhtml">
+        <ui:define name="tituloJanela">
+            Game Store
+        </ui:define>
+        <ui:define name="conteudo">
+            <h:form id="formulario">
+                <p:panel header="Cadastro de Acessórios" style="margin-top:50px;">
+                    <h:panelGrid columns="2" style="margin-top: 20px;">
+                        <p:outputLabel value="Acessório:" for="nomeacessorio"/>
+                        <p:inputText id="nomeacessorio"></p:inputText>
+                        <p:outputLabel for="preco" value="Preço:" />
+                        <p:inputText id="preco" onkeypress="return SomenteNumero()"></p:inputText>
+                        <p:outputLabel for="quantidade" value="Quantidade:" />
+                        <p:inputText id="quantidade"></p:inputText>
+                        <p:outputLabel for="status" value="Status:" />
+                        <p:selectOneMenu id="status" style="width:225px">
+                            <f:selectItem itemLabel="------Selecione Item-------" itemValue="" />
+                            <f:selectItem itemLabel="Disponível" itemValue="Disponível" />
+                            <f:selectItem itemLabel="Indisponível" itemValue="Indisponível" />
+                        </p:selectOneMenu>
+                        <p:outputLabel for="marca" value="Marca:" />
+                        <p:selectOneMenu id="marca" style="width:225px">
+                            <f:selectItem itemLabel="------Selecione Item-------" itemValue="" />
+                            <f:selectItem itemLabel="Microsoft" itemValue="Microsof" />
+                            <f:selectItem itemLabel="Sony" itemValue="Sony" />
+                        </p:selectOneMenu>
+                    </h:panelGrid>
+                    <p:commandButton value="Cadastrar"></p:commandButton>
+                </p:panel>
+            </h:form>
+        </ui:define>
+    </ui:composition>
+</html>

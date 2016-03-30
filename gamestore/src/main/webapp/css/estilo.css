@@ -1,1 +1,42 @@
-
+.terceiraColuna{
+    text-align: center;
+    background-color: brown;
+}
+.segundaColuna{
+    text-align: center;
+    background-color: activeborder;
+}
+.primeiraColuna{
+    text-align: center;
+    background-color: chartreuse;
+}
+.titulo{
+    font-size: 1.4px;
+    font-style: italic;
+    font-family: Palatino;
+    text-align: center;
+}
+#cabecalho{
+    padding: 20px;
+    height: 30px;
+    margin-bottom: 10px;
+    background-color: darkseagreen;
+    border: 1px solid darkgray;
+}
+#barraEsquerda{
+    border: thin solid lightgray;
+    padding: 5px;
+    width: 180px;
+    background-color: #ffffff;
+    height:500px;
+}
+#conteudo{
+    padding: 5px;
+    border: thin solid lightgray;
+    background-color: #ffffff;
+    position: absolute;
+    right: 8px;
+    left: 190px;
+    height: 500px;
+    top:90px;
+}
