@@ -10,14 +10,9 @@ function SomenteNumero(e) {
     }
 }
 
-function valor(){
+function validaCampo(){
 
-   var moeda = document.getElementById("preco");
-   alert(modeda);
-   moeda = moeda.replace(".","");
-
-   moeda = moeda.replace(",",".");
-
-   return parseFloat(moeda);
-
+ var nome = document.getElementById("nomeacessorio");
+ alert(nome);
+    
 }
