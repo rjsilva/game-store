@@ -5,15 +5,17 @@
  */
 package br.com.gamestore.dao;
 
+import java.util.List;
+
 /**
  *
  * @author rjs
+ * @param <T>
  */
-public interface GenericDao {
-    
-    public void cadastrar();
-    public void deletar();
-    public void atualizar();
-    public void pesquisar();
+public interface GenericDao<T> { 
+    public void cadastrar(T obj);
+    public void deletar(T obj);
+    public void atualizar(Integer id);
+    public List<T> getLista(T obj);
     
 }
