@@ -25,8 +25,9 @@ public class Acessorio implements Serializable {
     private Long id;
     private String nome;
     private double preco;
-    private boolean status;
+    private int status;
     private int quantidade;
+    private String marca;
 
     public Long getId() {
         return id;
@@ -92,14 +93,14 @@ public class Acessorio implements Serializable {
     /**
      * @return the status
      */
-    public boolean isStatus() {
+    public int getStatus() {
         return status;
     }
 
     /**
      * @param status the status to set
      */
-    public void setStatus(boolean status) {
+    public void setStatus(int status) {
         this.status = status;
     }
 
@@ -116,5 +117,14 @@ public class Acessorio implements Serializable {
     public void setQuantidade(int quantidade) {
         this.quantidade = quantidade;
     }
+
+    public String getMarca() {
+        return marca;
+    }
+
+    public void setMarca(String marca) {
+        this.marca = marca;
+    }
+    
     
 }

@@ -14,29 +14,36 @@
             Game Store
         </ui:define>
         <ui:define name="conteudo">
+            
             <h:form id="formulario">
+                <p:messages id="msgs" autoUpdate="true"/>
                 <p:panel header="Cadastro de Acessórios" style="margin-top:50px;">
                     <h:panelGrid columns="2" style="margin-top: 20px;">
                         <p:outputLabel value="Acessório:" for="nomeacessorio"/>
-                        <p:inputText id="nomeacessorio" required="false"></p:inputText>
+                        <p:inputText id="nomeacessorio" required="false" value="#{acessoriosBean.acessorio.nome}"></p:inputText>
+                        
                         <p:outputLabel for="preco" value="Preço:" />
-                        <p:inputText id="preco" onkeypress="return SomenteNumero()"></p:inputText>
+                        <p:inputText id="preco" onkeypress="return SomenteNumero()" value="#{acessoriosBean.acessorio.preco}" ></p:inputText>
+                        
                         <p:outputLabel for="quantidade" value="Quantidade:" />
-                        <p:inputText id="quantidade"></p:inputText>
+                        <p:inputText id="quantidade" value="#{acessoriosBean.acessorio.quantidade}"></p:inputText>
+                        
+                        
                         <p:outputLabel for="status" value="Status:" />
-                        <p:selectOneMenu id="status" style="width:225px">
+                        <p:selectOneMenu id="status" style="width:225px" value="#{acessoriosBean.acessorio.status}" >
                             <f:selectItem itemLabel="------Selecione Item-------" itemValue="" />
-                            <f:selectItem itemLabel="Disponível" itemValue="Disponível" />
-                            <f:selectItem itemLabel="Indisponível" itemValue="Indisponível" />
+                            <f:selectItem itemLabel="Disponível" itemValue="0" />
+                            <f:selectItem itemLabel="Indisponível" itemValue="1" />
                         </p:selectOneMenu>
+                        
                         <p:outputLabel for="marca" value="Marca:" />
-                        <p:selectOneMenu id="marca" style="width:225px">
+                        <p:selectOneMenu id="marca" style="width:225px" value="#{acessoriosBean.acessorio.marca}">
                             <f:selectItem itemLabel="------Selecione Item-------" itemValue="" />
                             <f:selectItem itemLabel="Microsoft" itemValue="Microsof" />
                             <f:selectItem itemLabel="Sony" itemValue="Sony" />
                         </p:selectOneMenu>
                     </h:panelGrid>
-                    <p:commandButton value="Cadastrar" onclick="validaCampo()"></p:commandButton>
+                    <p:commandButton value="Cadastrar"  action="#{acessoriosBean.adicionaAcessorio()}"></p:commandButton>
                 </p:panel>
             </h:form>
         </ui:define>
