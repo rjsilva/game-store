@@ -11,6 +11,6 @@ public interface GenericDao<T> {
     public void cadastrar(T obj);
     public void deletar(T obj);
     public void atualizar(Integer id);
-    public List<T> getLista(T obj);
+    public List<T> getLista();
     
 }

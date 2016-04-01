@@ -22,15 +22,15 @@ public class AcessorioDao implements GenericDao<Acessorio> {
 //    }
 
     @Override
-    public void cadastrar(Acessorio ac) {
+    public void cadastrar(Acessorio acessorio) {
         Session session = HibernateUtil.getSessionFactory().openSession();
         Transaction t = session.beginTransaction();
-        session.save(ac);
+        session.save(acessorio);
         t.commit();
     }
 
     @Override
-    public void deletar(Acessorio obj) {
+    public void deletar(Acessorio acessorio) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
@@ -40,7 +40,7 @@ public class AcessorioDao implements GenericDao<Acessorio> {
     }
 
     @Override
-    public List<Acessorio> getLista(Acessorio obj) {
+    public List<Acessorio> getLista() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
