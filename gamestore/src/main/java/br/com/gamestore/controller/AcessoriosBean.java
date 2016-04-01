@@ -24,7 +24,7 @@ public class AcessoriosBean {
 
     public void adicionaAcessorio() {
         AcessorioDao dao = new AcessorioDao();
-        dao.salvar(acessorio);
+        dao.cadastrar(acessorio);
         FacesMessage msg = new FacesMessage("Registro salvo com sucesso!");
         FacesContext.getCurrentInstance().addMessage(null, msg);
     }
