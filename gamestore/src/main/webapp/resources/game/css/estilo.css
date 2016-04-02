@@ -2,6 +2,11 @@ body{
     margin: 0;
 }
 
+ul li  {
+    list-style-type: none;
+    text-decoration: none;
+}
+
 .terceiraColuna{
     text-align: center;
     background-color: brown;
@@ -29,26 +34,76 @@ body{
 }
 #barraEsquerda{
     border: thin solid lightgray;
-    padding: 5px;
-    width: 180px;
+    padding: 2px;
+    width: 200px;
     background-color: #ffffff;
     height:500px;
 }
 #conteudo{
-    padding: 5px;
+//  padding: 5px;
     border: thin solid lightgray;
     background-color: #ffffff;
     position: absolute;
     right: 8px;
-    left: 190px;
-    height: 500px;
-    top:90px;
-}
-
-#footer{
-    text-align: center;
+    left: 205px;
+    height: 505px;
+    top:80px;
 }
 
 #header{
     background-color: #80b3ff;
+    margin: 0;
+    padding: 0;
 }
+
+#menu{
+    text-decoration: none;
+}
+
+#footer{
+    font-size: 20px;
+    font-style: normal;
+    font-family: sans-serif;
+    text-align: center;
+    margin-top: 15px;
+}
+
+/* MENU */
+.aw-menu {
+    font-size: 1.1em;
+}
+
+.aw-menu > ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.aw-menu > ul a {
+    display: block;
+    padding: 10px 15px;
+
+    text-decoration: none;
+    font-weight: 500;
+    color: #373737;
+} 
+
+.aw-menu > ul i {
+    margin-right: 6px;
+}
+
+.aw-menu > ul a:hover, .aw-menu > ul a:focus {
+    background-color: #dfdfdf;
+}
+
+.aw-menu > ul .is-selected {
+    border-left: 3px solid #1e94d2;
+    background-color: #f3f3f3;
+}
+
+.aw-menu > ul .is-selected a {
+    margin-left: -3px;
+    color: #1e94d2;
+}
+
+

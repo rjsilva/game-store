@@ -9,19 +9,25 @@
         <h:outputStylesheet library="game" name="css/estilo.css" />
     </h:head>
     <h:body>
-        <header id="header">
-            <h:graphicImage library="game" name="img/imagem.png" />
-        </header>
+        <div>
+            <header id="header">
+                <h:graphicImage library="game" name="img/imagem.png" />
+            </header>
+        </div>
 
-        <nav id="menu"> 
-            <ui:include src="menu.xhtml" />
-        </nav>
+        <div id="barraEsquerda">
+            <ui:include src="menu.xhtml" /> 
+        </div>
 
-        <section id="corpo">
-            <ui:insert name="corpo" />
-        </section>
+        <div id="conteudo">
+            <section>
+                <ui:insert name="conteudo" />
+            </section>
+        </div>
 
-        <footer id="footer">Game Store @2016</footer>
+        <div id="footer">
+            <footer>Game Store @2016</footer>
+        </div>
 
     </h:body>
 </html>

@@ -4,12 +4,13 @@
                 xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
                 xmlns:p="http://primefaces.org/ui"
                 template="/WEB-INF/template/layout.xhtml">
-    <ui:define name="corpo">
+    <ui:define name="conteudo">
 
-        <h:form id="formulario" style="margin-top: 10px;">
-            <p:messages id="msgs" autoUpdate="true"/>
+        <h:form id="formulario">
 
-            <p:panel header="Cadastro de Acessórios" id="cadastro-acessorio" style="margin: 10px;">
+            <p:messages id="msgs" autoUpdate="true" style="margin: 10px;"/>
+
+            <p:panel header="Cadastro de Acessórios" id="cadastro-acessorio" style="margin: 20px;">
                 <h:panelGrid columns="2">
                     <p:outputLabel value="Acessório:" for="nomeacessorio"/>
                     <p:inputText id="nomeacessorio" required="false" value="#{acessoriosBean.acessorio.nome}"></p:inputText>
