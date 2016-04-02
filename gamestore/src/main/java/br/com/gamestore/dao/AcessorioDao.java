@@ -28,6 +28,14 @@ public class AcessorioDao implements GenericDao<Acessorio> {
         session.save(acessorio);
         t.commit();
     }
+    
+        public List<Acessorio> listar() {
+        Session session = HibernateUtil.getSessionFactory().openSession();
+        Transaction t = session.beginTransaction();
+        List lista = session.createQuery("from tbl_Acessorio").list();
+        t.commit();
+        return lista;
+    }
 
     @Override
     public void deletar(Acessorio acessorio) {

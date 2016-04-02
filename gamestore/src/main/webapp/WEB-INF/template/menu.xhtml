@@ -5,9 +5,10 @@
     <nav class="aw-menu">
         <ul>
             <li><a href="index.xhtml">Home</a></li>
-            <li><a href="#">Cadastro de Acessório</a></li>
+            <li><h:link outcome="#{acessoriosBean.preparaNovoAcessorio()}" >Cadastro de Acessório</h:link></li>
             <li><a href="#">Estoque</a></li>
             <li><a href="#">Relátorios</a></li>
+            <li><h:link outcome="#{acessoriosBean.consultarAcessorios()}" >Gerenciar Acessórios</h:link></li>
         </ul>
     </nav>
 

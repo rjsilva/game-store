@@ -1,0 +1,37 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:h="http://xmlns.jcp.org/jsf/html"
+                xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+                xmlns:p="http://primefaces.org/ui"
+                xmlns:f="http://xmlns.jcp.org/jsf/core"
+                template="/WEB-INF/template/layout.xhtml">
+    <ui:define name="conteudo">
+
+        <p:messages id="msgs" autoUpdate="true" style="margin: 10px;"/>
+
+        <h:form style="padding: 10px;">
+            <p:toolbar>
+                <f:facet name="left">
+                    <p:commandButton value="Novo" icon="ui-icon-document" action="#{acessoriosBean.preparaNovoAcessorio()}" />
+                </f:facet>
+            </p:toolbar>
+        </h:form>
+        <p:dataTable value="#{acessoriosBean.acessorios}" var="acessorio" emptyMessage="Nenhuma registro encontrado!" rows="10" paginator="true" paginatorPosition="bottom" style="padding:  0 10px  0 10px;">
+
+            <p:column headerText="Nome">
+                <h:outputText value="#{acessorio.nome}" />
+            </p:column>
+
+            <p:column headerText="Preço R$:">
+                <h:outputText value="#{acessorio.preco}" />
+            </p:column>
+
+            <p:column headerText="Marca">
+                <h:outputText value="#{acessorio.marca}" />
+            </p:column>
+
+        </p:dataTable>
+
+    </ui:define>
+
+</ui:composition>
+
